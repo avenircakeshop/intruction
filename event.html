@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員様限定クーポンについて</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .accordion {
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            background-color: #eee;
+            margin-top: 10px;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        .panel img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            position: relative;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .description {
+            position: absolute;
+            right: 0px;
+            bottom: 20px;
+            background: rgba(255, 255, 255, 1);
+            padding: 5px;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+        .bullet-points {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>会員様限定クーポンについて</h1>
+    <button class="accordion">期間</button>
+    <div class="panel">
+        <p>2024.06.21(金)〜2024.8.25(日)</p>
+    </div>
+
+    <button class="accordion">昨年からの変更点</button>
+    <div class="panel">
+        <ul class="bullet-points">
+            <li>今年は「はがき」と「LINE」の2パターンで実施（郵便料金の値上げのため）</li>
+            <li>「はがき」と「LINE」クーポンの同時所持は不可</li>
+            <li>例年の「3回目の15％オフクーポン」は「はがき提示：10％オフ」＋「LINE提示：5％オフ」= 15％オフ</li>
+            <li>今年は粗品のクッキーの配布なし</li>
+        </ul>
+    </div>
+
+    <button class="accordion">はがきについて</button>
+    <div class="panel">
+        <p>例年と使い方は同じです。</p>
+        <p>会員カードの提示とはがきの提示を会計時に確認したのち、使用するクーポンの空欄に押印と日付の記入をしてください。</p>
+        <div class="image-container">
+            <img src="http://www.avenir.gr.jp/fcblog/wp-content/uploads/sites/284/2024/06/20230508-1.jpg" alt="画像0">
+            <div class="description">※昨年のはがきの画像</div>
+        </div>
+    </div>
+
+    <button class="accordion">LINEについて</button>
+    <div class="panel">
+        <p>クーポン配布対象：LINEに会員番号を連携しているお客様</p>
+        <p>告知日：６月中旬ごろを予定</p>
+        <p>LINEでのクーポン利用は全てLINE上で完結します</p>
+    </div>
+
+    <button class="accordion">クーポンの使い方</button>
+    <div class="panel">
+        <p>6/21(金)にLINEトーク画面下のメニュー内にクーポンを表示</p>
+        <div class="image-container">
+            <img src="http://www.avenir.gr.jp/fcblog/wp-content/uploads/sites/284/2024/06/e063cc450cbf2f4593237b19b6f9925b.jpg" alt="画像1">
+            <div class="description">クーポン使用前の画面</div>
+        </div>
+        <p>使いたいクーポンの「クーポンを表示する」をタップするとクーポンが画面上に表示され、注意事項を確認の後、「クーポンを使用する」をタップするとクーポンを使用可能です。</p>
+        <p>クーポンを使用すると「⚪︎月⚪︎日５％オフクーポンを使用しました」とメッセージが送られ、メニューの画面が変わります</p>
+        <div class="image-container">
+            <img src="http://www.avenir.gr.jp/fcblog/wp-content/uploads/sites/284/2024/06/a3f1e5fa7c1170f202b41090f3e5352f.jpg" alt="画像2">
+            <div class="description">クーポン使用後の画面</div>
+        </div>
+    </div>
+
+    <button class="accordion">次のクーポンの獲得方法</button>
+    <div class="panel">
+        <p>1. お客様がクーポンを使用する</p>
+        <p>2. メニュー右上の「QRコードを読み取る」をタップしてQRコードリーダーが起動する</p>
+        <p>3. レジで保管している店舗用QRコードを読み取る</p>
+        <p>4. 次の日の午前9時にメニューが切り替わり、次のクーポンが使用可能になります ※画像参照</p>
+        <div class="image-container">
+            <img src="http://www.avenir.gr.jp/fcblog/wp-content/uploads/sites/284/2024/06/14f71641eafd27033efd649a96484360.jpg" alt="画像3">
+            <div class="description">※次のクーポン画面</div>
+        </div>
+        <p>15％オフクーポン・感謝の5％オフクーポンまでの流れも同様です。</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
